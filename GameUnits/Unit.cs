@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace GameUnits
 {
     public abstract class Unit 
@@ -13,7 +18,7 @@ namespace GameUnits
             Health = health;
         }
 
-        public abstract float Cost { get; } //Read-only property
+        public abstract float Cost { get; } //Read-only abstract property
         
         public void Move() => Console.WriteLine($"{movement}");
         //Shows how much the unity moved

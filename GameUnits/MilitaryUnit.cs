@@ -1,3 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 namespace GameUnits
 {
     public class MilitaryUnit : Unit // Herança!!
@@ -18,6 +23,7 @@ namespace GameUnits
         }
 
         public override float Cost //Overwrites original Cost property
+        {    
             get
             {
                 return AttackPower + XP;
