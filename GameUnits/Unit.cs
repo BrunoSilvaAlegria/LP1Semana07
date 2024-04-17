@@ -13,7 +13,7 @@ namespace GameUnits
             Health = health;
         }
 
-        public abstract float Cost(); //Read-only method
+        public abstract float Cost { get; } //Read-only property
         
         public void Move() => Console.WriteLine($"{movement}");
         //Shows how much the unity moved
