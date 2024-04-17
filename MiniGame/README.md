@@ -31,9 +31,10 @@
             + FireGun(): void
       }
 
-      Characters "1" *--> "*" Weapon
-      Player <|-- Character
-      Enemy <|-- Character
-      Sword <|-- Weapon
-      Gun <|-- Weapon
+      Character "1" *--> "*" Weapon
+      Character <|-- Player
+      Character <|-- Enemy
+      Weapon <|-- Sword
+      Weapon <|-- Gun
 ```
+
