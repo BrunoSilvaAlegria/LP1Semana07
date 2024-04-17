@@ -4,7 +4,7 @@
       class Character {
             # weapons: Weapon
             + Name: string
-            + Fight(): void
+            + Fight() void
 
             
       }
@@ -23,12 +23,12 @@
 
       class Sword {
             + BladeLength: float 
-            + AttackWithSword(): void
+            + AttackWithSword() void
       }
 
       class Gun {
             + Ammo: int
-            + FireGun(): void
+            + FireGun() void
       }
 
       Character "1" *--> "*" Weapon
@@ -37,4 +37,3 @@
       Weapon <|-- Sword
       Weapon <|-- Gun
 ```
-
