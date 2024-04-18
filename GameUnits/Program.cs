@@ -28,7 +28,7 @@ namespace GameUnits
 
             // Output esperado:
             //
-            // MilitaryUnit: HP=12 COST=4,00 AP=2 XP=2
+            // MilitaryUnit: HP=12 COST=4,00 AP=2 XP=2    
             // MilitaryUnit: HP=3 COST=3,00 AP=3 XP=0
             // SettlerUnit: HP=1 COST=5,00
         }
