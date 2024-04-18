@@ -6,15 +6,31 @@ namespace GameUnits
     {
         private static void Main()
         {
-            Unit[] units= new Unit[3]; //Array com 3 units
-            units[0] = new MilitaryUnit(5, 20, 4);
-            units[1] = new MilitaryUnit(7, 8, 9);
-            units[2] = new SettlerUnit();
+            // Criar array com três unidades
+            Unit[] units = new Unit[]
+            {
+                new MilitaryUnit(3, 10, 2),
+                new MilitaryUnit(4, 5, 3),
+                new SettlerUnit(),
+            };
 
-            //First unit attacks the third unit
+            // Unidade 0 ataca unidade 1
+            (units[0] as MilitaryUnit).Attack(units[1]);
+            // Unidade 0 ataca unidade 2
             (units[0] as MilitaryUnit).Attack(units[2]);
-            //Second unit attacks the first unit
-            (units[1] as MilitaryUnit).Attack(units[0]);
-        }   
+
+            // "Imprimir" cada unidade
+            // chamando implicitamente o método ToString() de cada uma delas
+            foreach (Unit u in units)
+            {
+                Console.WriteLine(u);
+            }
+
+            // Output esperado:
+            //
+            // MilitaryUnit: HP=12 COST=4,00 AP=2 XP=2
+            // MilitaryUnit: HP=3 COST=3,00 AP=3 XP=0
+            // SettlerUnit: HP=1 COST=5,00
+        }
     }
 }
