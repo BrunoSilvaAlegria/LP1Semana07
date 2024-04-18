@@ -41,5 +41,10 @@ namespace GameUnits
             XP++;
             u.Health -= AttackPower;
         }
-    }
+
+        //Method ToString gets the type of unit this unit is, as well as its
+        //health, cost (with two decimal places), attack power and experience.  
+        public override string ToString() => $"{GetType().Name}:" +
+                $" HP={Health} COST={Cost.ToString("0.00")} AP={AttackPower} XP={XP}";
+    }   
 }
