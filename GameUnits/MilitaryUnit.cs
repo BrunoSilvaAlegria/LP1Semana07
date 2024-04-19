@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace GameUnits
 {
-    public class MilitaryUnit : Unit // Herança!!
+    public class MilitaryUnit : XPUnit // Herança!!
     {
         public int AttackPower { get; }
         
@@ -14,7 +14,7 @@ namespace GameUnits
         {
             get
             {
-                return base.Health;
+                return base.Health + XP;
             }
             set
             {
@@ -26,19 +26,18 @@ namespace GameUnits
         {    
             get
             {
-                return AttackPower;
+                return AttackPower + XP;
             }
         }
 
         public MilitaryUnit(int movement, int health, int attackPower) : base(movement, health)
         {                                                        // Unit(int, int)
             AttackPower = attackPower;
-            
         }
 
         public void Attack(Unit u)
         {
-           
+            XP++;
             u.Health -= AttackPower;
         }
 

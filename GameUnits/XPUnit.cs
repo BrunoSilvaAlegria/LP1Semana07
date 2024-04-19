@@ -9,11 +9,11 @@ namespace GameUnits
     {
         public int XP { get; protected set; } 
 
-        public XPUnit(int movement, int health) : base(movement,health)
-        {
-            XP = 0;
+        public XPUnit(int movement, int health) : base(movement,health) 
+        {                                           // Unit(int, int)
+            XP = 0; //Initializes XP to 0
         }     
 
-        public override string ToString() => base.ToString() + $"XP={XP}";
+        public override string ToString() => base.ToString() + $" XP={XP}";
     }
 }
