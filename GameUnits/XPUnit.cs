@@ -14,6 +14,6 @@ namespace GameUnits
             XP = 0;
         }     
 
-        public override string ToString() => $"{GetType().Name}:" + $"XP={XP}";
+        public override string ToString() => base.ToString() + $"XP={XP}";
     }
 }
